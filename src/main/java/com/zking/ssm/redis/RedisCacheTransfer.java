@@ -1,0 +1,24 @@
+package com.zking.ssm.redis;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RedisCacheTransfer {
+
+    @Autowired
+    RedisTemplate redisTemplate;
+
+    public RedisCacheTransfer() {
+    }
+
+//    public RedisTemplate getRedisTemplate() {
+//        return redisTemplate;
+//    }
+
+    public void setRedisTemplate(RedisTemplate redisTemplate) {
+        RedisCache.setRedisTemplate(redisTemplate);
+    }
+
+}
